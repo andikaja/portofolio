@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Andika</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: black;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ff0000;
+    }
+
+    .about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 150px 50px 100px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      border-top: 3px solid red;
+      border-bottom: 3px solid red;
+      padding: 40px 30px;
+      gap: 30px;
+      max-width: 1000px;
+    }
+
+    .about-image img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid red;
+    }
+
+    .about-text {
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ANDIKA</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html" class="active">ABOUT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="skill.html">SKILL</a>
+      <a href="sertificate.html">SERTIFICATE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="image/download.jpg" alt="Foto Andika">
+      </div>
+      <div class="about-text">
+        Nama saya Andika, siswa dari SMKN 1 Nglegok jurusan Teknik Komputer dan Jaringan. Saya tinggal di Ds. Sukosewu, RT 02/RW 06, Kecamatan Gandusari, Kabupaten Blitar.
+        <br><br>
+        Saya telah mempelajari banyak hal seputar jaringan dan sistem komputer yang sangat bermanfaat untuk pengembangan diri saya di dunia teknologi informasi.
+        <br><br>
+        Selama menempuh pendidikan di jurusan Teknik Komputer dan Jaringan, saya telah banyak mengenal beragam aspek teknologi informasi, mulai dari jaringan dasar hingga sistem komputer yang kompleks. Proses belajar ini memberi saya pengalaman yang menyenangkan
+      </div>      
+    </div>
+  </section>
+</body>
+</html>

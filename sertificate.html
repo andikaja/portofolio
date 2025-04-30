@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sertifikat Andika</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .sertifikat-section {
+      padding: 150px 50px 100px;
+      text-align: center;
+    }
+
+    .sertifikat-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .sertifikat-card {
+      background-color: #8b0000;
+      border-radius: 15px;
+      width: 200px;
+      padding: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .sertifikat-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .sertifikat-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 2px solid white;
+    }
+
+    .sertifikat-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .sertifikat-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ANDIKA</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="skill.html">SKILL</a>
+      <a href="sertifikat.html">SERTIFICATE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="sertifikat-section">
+    <div class="sertifikat-container">
+      <!-- Loop 12 Sertifikat -->
+      <!-- Ganti nama file gambar dan PDF sesuai file kamu -->
+      <!-- Sertifikat 1-12 -->
+      <a href="sertifikat/sertifikat1.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 1" class="sertifikat-image">
+        <div class="sertifikat-title">Linux Debian</div>
+      </a>
+      <a href="sertifikat/sertifikat2.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 2" class="sertifikat-image">
+        <div class="sertifikat-title">Mikrotik Dasar</div>
+      </a>
+      <a href="sertifikat/sertifikat3.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 3" class="sertifikat-image">
+        <div class="sertifikat-title">Web Development</div>
+      </a>
+      <a href="sertifikat/sertifikat4.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 4" class="sertifikat-image">
+        <div class="sertifikat-title">Cisco Packet Tracer</div>
+      </a>
+      <a href="sertifikat/sertifikat5.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 5" class="sertifikat-image">
+        <div class="sertifikat-title">HTML & CSS</div>
+      </a>
+      <a href="sertifikat/sertifikat6.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 6" class="sertifikat-image">
+        <div class="sertifikat-title">Python Dasar</div>
+      </a>
+      <a href="sertifikat/sertifikat7.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 7" class="sertifikat-image">
+        <div class="sertifikat-title">Database MySQL</div>
+      </a>
+      <a href="sertifikat/sertifikat8.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 8" class="sertifikat-image">
+        <div class="sertifikat-title">Pemrograman Java</div>
+      </a>
+      <a href="sertifikat/sertifikat9.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 9" class="sertifikat-image">
+        <div class="sertifikat-title">Cyber Security Dasar</div>
+      </a>
+      <a href="sertifikat/sertifikat10.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 10" class="sertifikat-image">
+        <div class="sertifikat-title">Cloud Computing</div>
+      </a>
+      <a href="sertifikat/sertifikat11.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 11" class="sertifikat-image">
+        <div class="sertifikat-title">UI/UX Design</div>
+      </a>
+      <a href="sertifikat/sertifikat12.pdf" target="_blank" class="sertifikat-card">
+        <img src="image/download.jpg" alt="Sertifikat 12" class="sertifikat-image">
+        <div class="sertifikat-title">Networking Lanjut</div>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

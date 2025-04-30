@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andika Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: black;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 150px 100px 0;
+      height: 100vh;
+    }
+
+    .intro {
+      max-width: 50%;
+      padding-right: 30px;
+    }
+
+    .intro h3 {
+      color: red;
+      margin-bottom: 5px;
+    }
+
+    .intro h1 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .btn-kenalan {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #ff4d4d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-kenalan:hover {
+      background-color: #e60000;
+    }
+
+    .hero-img {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;
+    }
+
+    .hero-img img {
+      height: 100vh;
+      width: auto;
+      border-radius: 20px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ANDIKA</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="skill.html">SKILL</a>
+      <a href="sertificate.html">SERTIFICATE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h3>Helo</h3>
+      <h1>I'am <strong>Andika</strong></h1>
+      <a href="about.html" class="btn-kenalan">Kenalan Yuk</a>
+    </div>
+    <div class="hero-img">
+      <img src="image/ChatGPT_Image_23_Apr_2025__15.02.42-removebg-preview.png" alt="Anak SMA Melambaikan Tangan">
+    </div>
+  </main>
+</body>
+</html>

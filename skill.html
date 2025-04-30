@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Andika</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .skills-section {
+      padding: 150px 50px 100px;
+      text-align: center;
+    }
+
+    .skills-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .skill-card {
+      background-color: #1a1a1a;
+      border: 2px solid red;
+      border-radius: 20px;
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .skill-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid red;
+      background-color: red;
+      object-fit: cover;
+    }
+
+    .skill-title {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .skill-list {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 20px;
+      font-size: 16px;
+      list-style-type: disc;
+    }
+
+    .skill-list li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ANDIKA</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="skill.html">SKILL</a>
+      <a href="sertificate.html">SERTIFICATE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="skills-section">
+    <h2 class="skills-title">Skills</h2>
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <img src="image/download.jpg" alt="Andika Linux" class="skill-image">
+        <h3 class="skill-title">Linux Debian</h3>
+        <ul class="skill-list">
+          <li>Mengelola server Debian</li>
+          <li>Konfigurasi web server, DNS, dan firewall</li>
+          <li>Remote user & manajemen user</li>
+          <li>Konfigurasi jaringan dasar</li>
+        </ul>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <img src="image/download.jpg" alt="Andika Mikrotik" class="skill-image">
+        <h3 class="skill-title">Mikrotik</h3>
+        <ul class="skill-list">
+          <li>Konfigurasi routing dan bridge</li>
+          <li>Pengaturan firewall & NAT</li>
+          <li>Manajemen wireless</li>
+          <li>Troubleshooting jaringan Mikrotik</li>
+        </ul>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <img src="image/download.jpg" alt="Andika Web" class="skill-image">
+        <h3 class="skill-title">Web Development</h3>
+        <ul class="skill-list">
+          <li>HTML & CSS</li>
+          <li>Layout responsif dan rapi</li>
+          <li>Desain UI sederhana</li>
+          <li>Dasar JavaScript untuk interaksi</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

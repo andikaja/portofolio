@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Andika</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: black;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ff0000;
+    }
+
+    .experience-section {
+      padding: 150px 50px 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .experience-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 1000px;
+    }
+
+    .experience-container.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .experience-image img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid red;
+      background-color: red;
+    }
+
+    .experience-text {
+      border: 3px solid red;
+      padding: 20px;
+      flex: 1;
+      position: relative;
+    }
+
+    .experience-text h3 {
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      background-color: black;
+      padding: 0 10px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .experience-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .experience-container,
+      .experience-container.reverse {
+        flex-direction: column;
+      }
+
+      .experience-text h3 {
+        top: -15px;
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ANDIKA</div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="experience.html" class="active">EXPERIENCE</a>
+      <a href="skill.html">SKILL</a>
+      <a href="sertificate.html">SERTIFICATE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="experience-section">
+    <div class="experience-container">
+      <div class="experience-image">
+        <img src="image/download.jpg" alt="Foto Andika">
+      </div>
+      <div class="experience-text">
+        <h3>Projeck Web Programing</h3>
+        <p>Nama saya <b>ANDIKA</b> siswa dari <b>SMKN 1 NGLEGOK</b> jurusan <b>Teknik Komputer dan Jaringan</b></p>
+      </div>
+    </div>
+
+    <div class="experience-container reverse">
+      <div class="experience-image">
+        <img src="image/download.jpg" alt="Foto Andika">
+      </div>
+      <div class="experience-text">
+        <h3>Projeck SYSAdmin</h3>
+        <p>Nama saya <b>ANDIKA</b> siswa dari <b>SMKN 1 NGLEGOK</b> jurusan <b>Teknik Komputer dan Jaringan</b></p>
+      </div>
+    </div>
+
+    <div class="experience-container">
+      <div class="experience-image">
+        <img src="image/download.jpg" alt="Foto Andika">
+      </div>
+      <div class="experience-text">
+        <h3>Projek Pemrograman Web</h3>
+        <p>Nama saya <b>ANDIKA</b> siswa dari <b>SMKN 1 NGLEGOK</b> jurusan <b>Teknik Komputer dan Jaringan</b></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
