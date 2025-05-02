@@ -27,7 +27,8 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background-color: black;
+      background-color: #111;
+      border-bottom: 2px solid red;
       z-index: 10;
     }
 
@@ -80,34 +81,32 @@
       line-height: 1.6;
     }
     footer {
-  background-color: #111;
-  color: white;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 5;
-  gap: 25px;
-  font-size: 16px;
-  border-top: 2px solid red;
-}
+      background-color: #111;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 5;
+      gap: 25px;
+      font-size: 16px;
+      border-top: 2px solid red;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-footer a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-footer a:hover {
-  color: red;
-}
-
+    footer a:hover {
+      color: red;
+    }
   </style>
 </head>
 <body>
