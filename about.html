@@ -79,6 +79,35 @@
       font-size: 18px;
       line-height: 1.6;
     }
+    footer {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  gap: 25px;
+  font-size: 16px;
+  border-top: 2px solid red;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a:hover {
+  color: red;
+}
+
   </style>
 </head>
 <body>
@@ -108,5 +137,20 @@
       </div>      
     </div>
   </section>
+  <footer>
+  <a href="https://wa.me/6281234567890" target="_blank">
+    <img src="image/whatsapp.png" alt="WhatsApp" width="20"> WhatsApp
+  </a>
+  <a href="mailto:andika@example.com" target="_blank">
+    <img src="image/email.png" alt="Email" width="20"> Email
+  </a>
+  <a href="https://linkedin.com/in/andika" target="_blank">
+    <img src="image/linkedin.png" alt="LinkedIn" width="20"> LinkedIn
+  </a>
+  <a href="https://instagram.com/andika" target="_blank">
+    <img src="image/instagram.png" alt="Instagram" width="20"> Instagram
+  </a>
+</footer>
+
 </body>
 </html>
