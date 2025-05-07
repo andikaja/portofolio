@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -12,165 +13,130 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
-      background-color: #000000; /* Warna hitam solid */
-      color: white;
-      min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+```
+body {
+  background-color: #000000; /* Warna hitam solid */
+  color: white;
+  min-height: 100vh;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 50px;
-      background-color: #111;
-      border-bottom: 2px solid red;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      transition: all 0.3s ease-in-out;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background-color: #111;
+  border-bottom: 2px solid red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
 
-    .logo {
-      font-weight: bold;
-      font-size: 22px;
-    }
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
 
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-    nav a:hover {
-      color: red;
-    }
+nav a:hover {
+  color: red;
+}
 
-    .sertifikat-section {
-      padding: 150px 20px 100px;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
+.sertifikat-section {
+  padding: 150px 20px 100px;
+  text-align: center;
+}
 
-    .sertifikat-section h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: white;
-      animation: slideUp 1s ease-out;
-    }
+.sertifikat-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: white;
+}
 
-    .sertifikat-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
+.sertifikat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-    .sertifikat-box {
-      background: linear-gradient(135deg, #e52d27, #b31217); /* MERAH GRADASI */
-      padding: 20px 30px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      color: white;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      text-align: left;
-      text-decoration: none;
-      animation: slideUp 1.2s ease-in-out;
-    }
+.sertifikat-box {
+  background: linear-gradient(135deg, #e52d27, #b31217); /* MERAH GRADASI */
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: transform 0.3s ease;
+  text-align: left;
+  text-decoration: none;
+}
 
-    .sertifikat-box:hover {
-      transform: scale(1.03);
-      background-color: #b31217; /* Change background color on hover */
-    }
+.sertifikat-box:hover {
+  transform: scale(1.03);
+}
 
-    .sertifikat-box h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.sertifikat-box h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-    .sertifikat-box p {
-      font-size: 15px;
-      opacity: 0.9;
-    }
+.sertifikat-box p {
+  font-size: 15px;
+  opacity: 0.9;
+}
 
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 5;
-      gap: 25px;
-      font-size: 16px;
-      border-top: 2px solid red;
-    }
+footer {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  gap: 25px;
+  font-size: 16px;
+  border-top: 2px solid red;
+}
 
-    footer a {
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    footer a:hover {
-      color: red;
-    }
+footer a:hover {
+  color: red;
+}
 
-    /* Keyframes for animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+@media (max-width: 768px) {
+  .sertifikat-box {
+    width: 90%;
+  }
 
-    @keyframes slideUp {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+  nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+}
+```
 
-    /* Responsiveness */
-    @media (max-width: 768px) {
-      .sertifikat-box {
-        width: 90%;
-      }
-
-      nav a {
-        margin-left: 15px;
-        font-size: 14px;
-      }
-
-      header {
-        padding: 15px;
-      }
-
-      footer {
-        flex-direction: column;
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
