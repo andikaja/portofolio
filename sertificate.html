@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sertifikat Andika</title>
   <style>
     * {
@@ -13,10 +13,10 @@
     }
 
     body {
-      background-color: black;
+      background-color: #000000; /* Warna hitam solid */
       color: white;
       min-height: 100vh;
-      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     header {
@@ -24,13 +24,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 25px 50px;
-      position: fixed;
-      width: 100%;
-      top: 0;
       background-color: #111;
       border-bottom: 2px solid red;
+      position: fixed;
+      top: 0;
+      width: 100%;
       z-index: 10;
-      animation: slideDown 1s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     .logo {
@@ -46,20 +46,21 @@
       transition: 0.3s;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: #ff0000;
+    nav a:hover {
+      color: red;
     }
 
     .sertifikat-section {
       padding: 150px 20px 100px;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .sertifikat-section h2 {
       font-size: 32px;
       margin-bottom: 40px;
       color: white;
+      animation: slideUp 1s ease-out;
     }
 
     .sertifikat-container {
@@ -67,7 +68,7 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      animation: fadeInUp 1.5s ease-in-out;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .sertifikat-box {
@@ -78,13 +79,15 @@
       max-width: 600px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       color: white;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease;
       text-align: left;
       text-decoration: none;
+      animation: slideUp 1.2s ease-in-out;
     }
 
     .sertifikat-box:hover {
       transform: scale(1.03);
+      background-color: #b31217; /* Change background color on hover */
     }
 
     .sertifikat-box h3 {
@@ -112,8 +115,6 @@
       gap: 25px;
       font-size: 16px;
       border-top: 2px solid red;
-      animation: slideUp 1.2s ease-in-out;
-      flex-wrap: wrap;
     }
 
     footer a {
@@ -129,57 +130,45 @@
       color: red;
     }
 
-    /* Animasi */
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    /* Keyframes for animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes slideUp {
-      from { transform: translateY(100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
-    @keyframes fadeInUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    /* RESPONSIVE DESIGN */
+    /* Responsiveness */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        margin: 10px 10px 0 0;
-      }
-
-      .sertifikat-section {
-        padding: 120px 20px 100px;
-      }
-
-      .sertifikat-container {
-        width: 100%;
-        gap: 10px;
-      }
-
       .sertifikat-box {
         width: 90%;
       }
 
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      header {
+        padding: 15px;
+      }
+
       footer {
         flex-direction: column;
-        gap: 10px;
         font-size: 14px;
-        padding: 15px;
       }
     }
   </style>
@@ -193,7 +182,7 @@
       <a href="about.html">ABOUT</a>
       <a href="experience.html">EXPERIENCE</a>
       <a href="skill.html">SKILL</a>
-      <a href="sertificate.html" class="active">SERTIFICATE</a>
+      <a href="sertificate.html">SERTIFICATE</a>
     </nav>
   </header>
 
@@ -208,37 +197,45 @@
         <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
         <p>Essential skills and career paths in AI, powered by Microsoft and LinkedIn.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1INot55uLg5jx8x6mCWy7iGZlquJbJ53h/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Fortinet Network Security Expert (NSE) 1</h3>
-        <p>Basic networking security training and certification.</p>
+      <a href="https://drive.google.com/file/d/1IxY1r8zkgpqxeUUSjcMhwFV4EcivD_A5/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>FCF - Getting Started in Cybersecurity 2.0</h3>
+        <p>Introduction to the basics of cybersecurity fundamentals.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1oNGgIn0vU_3BcpLtIGowE1IS64l6s3sF/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Fortinet Network Security Expert (NSE) 2</h3>
-        <p>Intermediate networking security skills and certification.</p>
+      <a href="https://drive.google.com/file/d/1qSGPS_MAsTeY2RbQ1PIqjd9t4R3sT_lx/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>FCF - Technical Introduction to Cybersecurity 1.0</h3>
+        <p>Technical overview of network security and cybersecurity roles.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1R_NmoUsflI5JbM7fPNEIcd_0i6sqABRa/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Fortinet Network Security Expert (NSE) 3</h3>
-        <p>Advanced networking security skills and certification.</p>
+      <a href="https://drive.google.com/file/d/1mF4ptrLJuF71mL-1YSvUWNPl6Z4tH9WH/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>FCF - Introduction to the Threat Landscape 2.0</h3>
+        <p>Understanding current cybersecurity threats and risks.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1H9v8r0Nd5W_FXftgtVQpCuOWpCBKDswV/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Always Coding - Introduction to Programming</h3>
-        <p>Introduction to programming concepts with Always Coding.</p>
+      <a href="https://drive.google.com/file/d/1U9SXfJBYhngx0VtkzUy2_KrzrTw8Gpq7/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Fortinet Certified Fundamentals in Cybersecurity</h3>
+        <p>Cybersecurity basics certification from Fortinet.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1oAE7xR5x4L9cLzIXn5rz5Kn4SHISADgH/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Always Coding - Advanced Programming Techniques</h3>
-        <p>Advanced programming techniques in multiple languages.</p>
+      <a href="https://drive.google.com/file/d/1Ru439E5q8KdsbMOQnXwq8QGR8KXVdjoT/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Red Hat System Administration I (RH124 - RHA) - Ver. 9.3</h3>
+        <p>System admin training using Red Hat Enterprise Linux version 9.3.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1VqkcoXeFiq3Ayz4eZ_3Gz1yHZyD8DxdY/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Always Coding - Full Stack Web Development</h3>
-        <p>Skills for full-stack web development including front-end and back-end technologies.</p>
+      <a href="https://drive.google.com/file/d/1EplGwb9HA47kW9ybrw-q_5YIZGCakfrC/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Getting Started with Linux Fundamentals (RH104 - RHA) - Ver. 9.1</h3>
+        <p>Foundational training on Linux and command-line operations.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1ht6Ht6J3HtL7Fxb1rC9Y05-Tvg_FuTkG/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Always Coding - Data Structures and Algorithms</h3>
-        <p>Advanced data structures and algorithms for software development.</p>
+      <a href="https://drive.google.com/file/d/1fIyJy264JpoDoOWbJdYN76dT9JfDRxTp/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>CSS - Always Ngoding</h3>
+        <p>Pemahaman dasar tentang CSS untuk styling halaman web.</p>
       </a>
-      <a href="https://drive.google.com/file/d/1Th4BpxnNnpq7mzoS1yy7zI7Xp61vl2Vf/view?usp=sharing" target="_blank" class="sertifikat-box">
-        <h3>Always Coding - Web Development Essentials</h3>
-        <p>Basic skills for web development, covering HTML, CSS, and JavaScript.</p>
+      <a href="https://drive.google.com/file/d/10cSvYM6vNXZyqIaQBECOMxrDFu5ZSb5W/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>HTML - Always Ngoding</h3>
+        <p>Pengenalan elemen HTML dan struktur halaman web.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1Li4YIYzr27c2uxsHVTtfvYsOjysDPceD/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>JavaScript - Always Ngoding</h3>
+        <p>Dasar JavaScript dan interaktivitas halaman web.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1jbng8SPiCbFne_A9WjE2HNxKY29DuSbc/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>PHP - Always Ngoding</h3>
+        <p>Pengenalan sintaks dan pemrograman backend dengan PHP.</p>
       </a>
     </div>
   </section>
