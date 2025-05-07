@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sertifikat Andika</title>
   <style>
     * {
@@ -13,10 +13,10 @@
     }
 
     body {
-      background-color: #000;
+      background-color: black;
       color: white;
       min-height: 100vh;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,12 +24,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 25px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
       background-color: #111;
       border-bottom: 2px solid red;
-      position: fixed;
-      top: 0;
-      width: 100%;
       z-index: 10;
+      animation: slideDown 1s ease-in-out;
     }
 
     .logo {
@@ -45,8 +46,9 @@
       transition: 0.3s;
     }
 
-    nav a:hover {
-      color: red;
+    nav a:hover,
+    nav a.active {
+      color: #ff0000;
     }
 
     .sertifikat-section {
@@ -58,35 +60,31 @@
       font-size: 32px;
       margin-bottom: 40px;
       color: white;
-      animation: fadeInDown 1s ease forwards;
     }
 
     .sertifikat-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
+      animation: fadeInUp 1.5s ease-in-out;
     }
 
     .sertifikat-box {
-      background: linear-gradient(135deg, #e52d27, #b31217);
+      background: linear-gradient(135deg, #e52d27, #b31217); /* MERAH GRADASI */
       padding: 20px 30px;
       border-radius: 15px;
       width: 80%;
       max-width: 600px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
       text-align: left;
       text-decoration: none;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s forwards;
     }
 
     .sertifikat-box:hover {
       transform: scale(1.03);
-      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
     }
 
     .sertifikat-box h3 {
@@ -114,6 +112,8 @@
       gap: 25px;
       font-size: 16px;
       border-top: 2px solid red;
+      animation: slideUp 1.2s ease-in-out;
+      flex-wrap: wrap;
     }
 
     footer a {
@@ -129,39 +129,57 @@
       color: red;
     }
 
+    /* Animasi */
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* RESPONSIVE DESIGN */
     @media (max-width: 768px) {
-      .sertifikat-box {
-        width: 90%;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
       }
 
       nav a {
-        margin-left: 15px;
-        font-size: 14px;
+        margin: 10px 10px 0 0;
+      }
+
+      .sertifikat-section {
+        padding: 120px 20px 100px;
+      }
+
+      .sertifikat-container {
+        width: 100%;
+        gap: 10px;
+      }
+
+      .sertifikat-box {
+        width: 90%;
       }
 
       footer {
         flex-direction: column;
         gap: 10px;
         font-size: 14px;
-        padding: 20px;
-      }
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+        padding: 15px;
       }
     }
   </style>
@@ -175,24 +193,53 @@
       <a href="about.html">ABOUT</a>
       <a href="experience.html">EXPERIENCE</a>
       <a href="skill.html">SKILL</a>
-      <a href="sertificate.html">SERTIFICATE</a>
+      <a href="sertificate.html" class="active">SERTIFICATE</a>
     </nav>
   </header>
 
   <section class="sertifikat-section">
     <h2>Certificates</h2>
     <div class="sertifikat-container">
-      <!-- Sertifikat-box entries here -->
-      <!-- COPY dari daftar sertifikatmu sebelumnya -->
-      <!-- Sudah otomatis mendapatkan animasi -->
-      <!-- Mulai contoh -->
       <a href="https://drive.google.com/file/d/1tGsmNs0Tvv7yVpPHviXDTcFy0fo8AksV/view?usp=sharing" target="_blank" class="sertifikat-box">
         <h3>Generative AI for Student Training by Microsoft</h3>
         <p>Training in generative AI principles and applications for students.</p>
       </a>
-      <!-- Tambahkan sisanya sesuai data sebelumnya -->
-      <!-- Sisa sertifikat tetap sama seperti yang sudah kamu buat -->
-      <!-- Silakan paste semua sertifikat-box dari kode awalmu di sini -->
+      <a href="https://drive.google.com/file/d/1UFWUXQQa-gK7852_mJa-G0C60W_tBIaQ/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Career Essentials in Generative AI by Microsoft and LinkedIn</h3>
+        <p>Essential skills and career paths in AI, powered by Microsoft and LinkedIn.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1INot55uLg5jx8x6mCWy7iGZlquJbJ53h/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Fortinet Network Security Expert (NSE) 1</h3>
+        <p>Basic networking security training and certification.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1oNGgIn0vU_3BcpLtIGowE1IS64l6s3sF/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Fortinet Network Security Expert (NSE) 2</h3>
+        <p>Intermediate networking security skills and certification.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1R_NmoUsflI5JbM7fPNEIcd_0i6sqABRa/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Fortinet Network Security Expert (NSE) 3</h3>
+        <p>Advanced networking security skills and certification.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1H9v8r0Nd5W_FXftgtVQpCuOWpCBKDswV/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Always Coding - Introduction to Programming</h3>
+        <p>Introduction to programming concepts with Always Coding.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1oAE7xR5x4L9cLzIXn5rz5Kn4SHISADgH/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Always Coding - Advanced Programming Techniques</h3>
+        <p>Advanced programming techniques in multiple languages.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1VqkcoXeFiq3Ayz4eZ_3Gz1yHZyD8DxdY/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Always Coding - Full Stack Web Development</h3>
+        <p>Skills for full-stack web development including front-end and back-end technologies.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1ht6Ht6J3HtL7Fxb1rC9Y05-Tvg_FuTkG/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Always Coding - Data Structures and Algorithms</h3>
+        <p>Advanced data structures and algorithms for software development.</p>
+      </a>
+      <a href="https://drive.google.com/file/d/1Th4BpxnNnpq7mzoS1yy7zI7Xp61vl2Vf/view?usp=sharing" target="_blank" class="sertifikat-box">
+        <h3>Always Coding - Web Development Essentials</h3>
+        <p>Basic skills for web development, covering HTML, CSS, and JavaScript.</p>
+      </a>
     </div>
   </section>
 
@@ -211,14 +258,5 @@
     </a>
   </footer>
 
-  <script>
-    // Delay animation setiap kotak sertifikat saat scroll (stagger effect)
-    document.addEventListener("DOMContentLoaded", () => {
-      const boxes = document.querySelectorAll(".sertifikat-box");
-      boxes.forEach((box, i) => {
-        box.style.animationDelay = `${i * 0.1}s`;
-      });
-    });
-  </script>
 </body>
 </html>
