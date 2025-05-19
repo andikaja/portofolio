@@ -93,20 +93,20 @@
     }
 
     .hero-img {
-      flex: 1 1 100%; /* Ubah flex agar gambar bisa memenuhi sisa ruang */
+      flex: 1 1 300px;
       display: flex;
       justify-content: center;
-      align-items: flex-end; /* Posisi gambar agar mendekati bagian bawah */
+      align-items: center;
       animation: zoomIn 2s ease;
     }
-    
-    .hero-img img {
-      width: 100%; /* Menyesuaikan gambar dengan lebar kontainer */
-      height: 100vh; /* Memastikan gambar mengambil seluruh tinggi viewport */
-      object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
-      border-radius: 0; /* Menonaktifkan border-radius agar gambar memenuhi seluruh ruang */
-    }
 
+    .hero-img img {
+      max-height: 70vh;
+      width: 100%;
+      max-width: 950px;
+      border-radius: 20px;
+      object-fit: contain;
+    }
 
     footer {
       background-color: #111;
